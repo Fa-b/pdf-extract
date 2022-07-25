@@ -66,8 +66,7 @@ module.exports = function(pdf_path, options, cb) {
       err = 'no file exists at the path you specified';
       return cb(err);
     }
-    processor.process(pdf_path, options);
-    cb();
+    processor.process(pdf_path, options, cb);
   });
   return processor;
 }
